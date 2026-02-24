@@ -40,702 +40,268 @@
       };
     </script>
 
-    <style>
-      /* Setup Layar Penuh agar tidak scroll browser bawaan */
-      html,
-      body {
-        position: relative;
-        height: 100%;
-        overflow: hidden;
-      }
-      body {
-        background: #0f172a;
-        color: #e2e8f0;
-      }
-
-      /* Area Swiper */
-      .swiper {
-        width: 100%;
-        height: 100%;
-      }
-
-      /* Scrollbar khusus untuk bagian Projects (karena isinya panjang) */
-      .overflow-y-auto::-webkit-scrollbar {
-        width: 6px;
-      }
-      .overflow-y-auto::-webkit-scrollbar-track {
-        background: transparent;
-      }
-      .overflow-y-auto::-webkit-scrollbar-thumb {
-        background: #334155;
-        border-radius: 3px;
-      }
-
-      /* Efek Kaca pada Navbar */
-      .glass-nav {
-        background: rgba(15, 23, 42, 0.85);
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.5);
-      }
-
-      /* Transisi warna teks saat navbar aktif */
-      .nav-btn {
-        transition: color 0.3s ease;
-      }
-      .nav-btn.active {
-        color: #0f172a;
-        font-weight: 700;
-      } /* Teks jadi gelap saat kena kapsul putih */
-    </style>
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <div class="swiper mySwiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide flex items-center justify-center p-6 relative">
-          <div
-            class="absolute top-20 right-20 w-72 h-72 bg-primary/20 rounded-full blur-[100px]"
-          ></div>
+    <!-- SECTION 1: HOME -->
+    <section id="home" class="flex items-center justify-center p-6 relative">
+      <div class="absolute top-20 right-20 w-72 h-72 bg-primary/20 rounded-full blur-[100px]"></div>
 
-          <div class="text-center max-w-4xl z-10">
-            <p
-              class="text-primary font-semibold mb-4 tracking-wider uppercase text-sm animate-pulse"
-            >
-              Hello, I am
-            </p>
-            <h1
-              class="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"
-            >
-              Ahmad Sultoni Alwi
-            </h1>
-            <h2 class="text-2xl md:text-3xl text-slate-400 mb-8 font-light">
-              Building
-              <span class="text-white font-medium">Robust Systems</span> &
-              <span class="text-white font-medium">Intuitive Interfaces</span>.
-            </h2>
-            <p class="max-w-2xl mx-auto text-lg mb-10 text-slate-400">
-              Software Engineer & Full-Stack Developer specializing in Laravel,
-              Modern Web Technologies, and AI Integration.
-            </p>
-            <div class="flex justify-center gap-4">
-              <button
-                onclick="swiper.slideTo(2)"
-                class="bg-primary text-white hover:bg-blue-600 px-8 py-3 rounded-full font-medium transition-all shadow-lg shadow-blue-500/30"
-              >
-                View Projects
-              </button>
-              <a
-                href="https://www.linkedin.com/in/sultonialwi-56a980227/"
-                target="_blank"
-                class="border border-slate-700 text-slate-300 hover:text-white hover:bg-slate-800 px-4 py-3 rounded-full text-xl transition-colors"
-              >
-                <i class="fab fa-linkedin"></i>
-              </a>
-              <a
-                href="https://github.com/sultonialwi64"
-                target="_blank"
-                class="border border-slate-700 text-slate-300 hover:text-white hover:bg-slate-800 px-4 py-3 rounded-full text-xl transition-colors"
-              >
-                <i class="fab fa-github"></i>
-              </a>
-            </div>
-          </div>
+      <div class="text-center max-w-4xl z-10 my-auto">
+        <p class="text-primary font-semibold mb-4 tracking-wider uppercase text-sm animate-pulse">
+          Hello, I am
+        </p>
+        <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+          Ahmad Sultoni Alwi
+        </h1>
+        <h2 class="text-2xl md:text-3xl text-slate-400 mb-8 font-light">
+          Building <span class="text-white font-medium">Robust Systems</span> & <span class="text-white font-medium">Intuitive Interfaces</span>.
+        </h2>
+        <p class="max-w-2xl mx-auto text-lg mb-10 text-slate-400">
+          Software Engineer & Full-Stack Developer specializing in Laravel, Modern Web Technologies, and AI Integration.
+        </p>
+        <div class="flex justify-center flex-wrap gap-4">
+          <a href="#projects" class="bg-primary text-white hover:bg-blue-600 px-8 py-3 rounded-full font-medium transition-all shadow-lg shadow-blue-500/30">
+            View Projects
+          </a>
+          <a href="https://www.linkedin.com/in/sultonialwi-56a980227/" target="_blank" class="border border-slate-700 text-slate-300 hover:text-white hover:bg-slate-800 px-4 py-3 rounded-full text-xl transition-colors">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/sultonialwi64" target="_blank" class="border border-slate-700 text-slate-300 hover:text-white hover:bg-slate-800 px-4 py-3 rounded-full text-xl transition-colors">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: ABOUT -->
+    <section id="about" class="flex items-center justify-center p-6 bg-darker/50">
+      <div class="max-w-5xl w-full grid md:grid-cols-2 gap-8 md:gap-12 items-center my-16 py-8">
+        <div class="relative group mx-auto md:mx-0 max-w-[16rem] md:max-w-full">
+          <div class="absolute -inset-1 bg-gradient-to-r from-primary to-purple-600 rounded-2xl blur opacity-30 group-hover:opacity-75 transition duration-1000"></div>
+          <img src="asset/foto_profile.jpg" alt="Profile" class="relative rounded-2xl shadow-2xl w-full aspect-square object-cover" />
         </div>
 
-        <div
-          class="swiper-slide flex items-center justify-center p-6 bg-darker/50"
-        >
-          <div class="max-w-5xl w-full grid md:grid-cols-2 gap-12 items-center">
-            <div class="relative group mx-auto md:mx-0">
-              <div
-                class="absolute -inset-1 bg-gradient-to-r from-primary to-purple-600 rounded-2xl blur opacity-30 group-hover:opacity-75 transition duration-1000"
-              ></div>
-              <img
-                src="asset/foto_profile.jpg"
-                alt="Profile"
-                class="relative rounded-2xl shadow-2xl w-80 md:w-full aspect-square object-cover"
-              />
-            </div>
+        <div class="text-left">
+          <h3 class="text-primary font-bold uppercase tracking-wide mb-2">About Me</h3>
+          <h2 class="text-3xl font-bold text-white mb-6">Bridging the gap between Design and Engineering.</h2>
+          <p class="mb-6 leading-relaxed text-slate-300">
+            I am a Software Engineer with a strong foundation in <strong>Full-Stack Web Development</strong>. Currently active as a Freelance IT Consultant, I help businesses transform their ideas into scalable digital products.
+          </p>
 
-            <div class="text-left">
-              <h3 class="text-primary font-bold uppercase tracking-wide mb-2">
-                About Me
-              </h3>
-              <h2 class="text-3xl font-bold text-white mb-6">
-                Bridging the gap between Design and Engineering.
-              </h2>
-              <p class="mb-6 leading-relaxed text-slate-300">
-                I am a Software Engineer with a strong foundation in
-                <strong>Full-Stack Web Development</strong>. Currently active as
-                a Freelance IT Consultant, I help businesses transform their
-                ideas into scalable digital products.
-              </p>
-
-              <div class="mb-8">
-                <p
-                  class="text-sm text-slate-500 mb-4 uppercase tracking-widest"
-                >
-                  Tech Stack
-                </p>
-                <div class="flex flex-wrap gap-6 text-3xl text-slate-400">
-                  <i
-                    class="fab fa-laravel hover:text-red-600 transition-colors"
-                  ></i>
-                  <i
-                    class="fab fa-php hover:text-purple-600 transition-colors"
-                  ></i>
-                  <i
-                    class="fab fa-js hover:text-yellow-400 transition-colors"
-                  ></i>
-                  <i
-                    class="fab fa-figma hover:text-pink-500 transition-colors"
-                  ></i>
-                  <i
-                    class="fas fa-database hover:text-blue-400 transition-colors"
-                  ></i>
-                </div>
-              </div>
-
-              <div class="flex gap-4">
-                <div
-                  class="p-4 bg-card border border-slate-700 rounded-lg w-1/2"
-                >
-                  <h4 class="text-2xl font-bold text-white mb-1">IT Solutions Provider</h4>
-                  <p class="text-sm text-slate-400">End-to-End Digital Transformation</p>
-                </div>
-                <div
-                  class="p-4 bg-card border border-slate-700 rounded-lg w-1/2"
-                >
-                  <h4 class="text-xl font-bold text-white mb-1">MSIB</h4>
-                  <p class="text-sm text-slate-400">Microsoft Alumni</p>
-                </div>
-              </div>
+          <div class="mb-8">
+            <p class="text-sm text-slate-500 mb-4 uppercase tracking-widest">Tech Stack</p>
+            <div class="flex flex-wrap gap-6 text-3xl text-slate-400">
+              <i class="fab fa-laravel hover:text-red-600 transition-colors"></i>
+              <i class="fab fa-php hover:text-purple-600 transition-colors"></i>
+              <i class="fab fa-js hover:text-yellow-400 transition-colors"></i>
+              <i class="fab fa-figma hover:text-pink-500 transition-colors"></i>
+              <i class="fas fa-database hover:text-blue-400 transition-colors"></i>
             </div>
           </div>
-        </div>
 
-        <div class="swiper-slide flex flex-col pt-16 pb-32 px-4 h-full">
-          <div class="max-w-6xl w-full mx-auto h-full flex flex-col">
-            <div class="text-center mb-8 shrink-0">
-              <h2 class="text-3xl font-bold text-white">Featured Projects</h2>
-              <p class="text-slate-400">Scroll down to see my recent work</p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <div class="p-4 bg-card border border-slate-700 rounded-lg flex-1">
+              <h4 class="text-xl md:text-2xl font-bold text-white mb-1">IT Solutions Provider</h4>
+              <p class="text-sm text-slate-400">End-to-End Digital Transformation</p>
             </div>
-
-            <div class="overflow-y-auto h-full pr-2 pb-24">
-              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div
-                  class="bg-card rounded-xl overflow-hidden border border-slate-700 hover:border-primary/50 transition-all hover:-translate-y-1"
-                >
-                  <div class="h-48 bg-slate-800 relative">
-                    <img
-                      src="asset/ruang.png"
-                      class="w-full h-full object-cover"
-                    />
-                    <div
-                      class="absolute top-2 right-2 bg-black/60 px-2 py-1 rounded text-xs text-white border border-white/20"
-                    >
-                      Private Repo
-                    </div>
-                  </div>
-                  <div class="p-5">
-                    <div class="flex gap-2 mb-3">
-                      <span
-                        class="text-xs bg-blue-900/50 text-blue-300 px-2 py-1 rounded"
-                        >Laravel</span
-                      >
-                      <span
-                        class="text-xs bg-slate-700 text-slate-300 px-2 py-1 rounded"
-                        >MySQL</span
-                      >
-                    </div>
-                    <h3 class="text-lg font-bold text-white mb-2">
-                      Govt. Room Booking
-                    </h3>
-                    <p class="text-slate-400 text-sm">
-                      Internal reservation system for Dinas Pendidikan. Features
-                      conflict detection and automated scheduling.
-                    </p>
-                  </div>
-                </div>
-
-                <div
-                  class="bg-card rounded-xl overflow-hidden border border-slate-700 hover:border-primary/50 transition-all hover:-translate-y-1"
-                >
-                  <div class="h-48 bg-slate-800 relative">
-                    <img
-                      src="asset/sanggar_catur.png"
-                      class="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div class="p-5">
-                    <div class="flex gap-2 mb-3">
-                      <span
-                        class="text-xs bg-orange-900/50 text-orange-300 px-2 py-1 rounded"
-                        >HTML/CSS</span
-                      >
-                      <span
-                        class="text-xs bg-yellow-900/50 text-yellow-300 px-2 py-1 rounded"
-                        >JS</span
-                      >
-                    </div>
-                    <h3 class="text-lg font-bold text-white mb-2">
-                      Chess School Web
-                    </h3>
-                    <p class="text-slate-400 text-sm">
-                      Modern profile website for Wonosobo Chess School. Focused
-                      on SEO and accessibility.
-                    </p>
-                  </div>
-                </div>
-
-                <div
-                  class="bg-card rounded-xl overflow-hidden border border-slate-700 hover:border-primary/50 transition-all hover:-translate-y-1"
-                >
-                  <div class="h-48 bg-slate-800 relative">
-                    <img
-                      src="asset/bimbel.png"
-                      class="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div class="p-5">
-                    <div class="flex gap-2 mb-3">
-                      <span
-                        class="text-xs bg-green-900/50 text-green-300 px-2 py-1 rounded"
-                        >Frontend</span
-                      >
-                      <span
-                        class="text-xs bg-purple-900/50 text-purple-300 px-2 py-1 rounded"
-                        >Responsive</span
-                      >
-                    </div>
-                    <h3 class="text-lg font-bold text-white mb-2">
-                      Edu Center Platform
-                    </h3>
-                    <p class="text-slate-400 text-sm">
-                      Conversion-focused landing page for a Tutoring Agency,
-                      highlighting courses and success stories.
-                    </p>
-                  </div>
-                </div>
-
-                <div
-                  class="bg-card rounded-xl overflow-hidden border border-slate-700 hover:border-primary/50 transition-all hover:-translate-y-1"
-                >
-                  <div class="h-48 bg-slate-800 relative">
-                    <img
-                      src="asset/script.jpeg"
-                      class="w-full h-full object-cover"
-                    />
-                    <div
-                      class="absolute top-2 right-2 bg-indigo-600/80 px-2 py-1 rounded text-xs text-white"
-                    >
-                      Groq API
-                    </div>
-                  </div>
-                  <div class="p-5">
-                    <div class="flex gap-2 mb-3">
-                      <span
-                        class="text-xs bg-indigo-900/50 text-indigo-300 px-2 py-1 rounded"
-                        >AI Integration</span
-                      >
-                    </div>
-                    <h3 class="text-lg font-bold text-white mb-2">
-                      AI Story Generator
-                    </h3>
-                    <p class="text-slate-400 text-sm">
-                      Generates creative stories instantly using Groq AI.
-                      Showcasing prompt engineering.
-                    </p>
-                  </div>
-                </div>
-
-                <div
-                  class="bg-card rounded-xl overflow-hidden border border-slate-700 hover:border-primary/50 transition-all hover:-translate-y-1"
-                >
-                  <div class="h-48 bg-slate-800 relative">
-                    <img
-                      src="asset/footage.png"
-                      class="w-full h-full object-cover"
-                    />
-                    <div
-                      class="absolute top-2 right-2 bg-teal-600/80 px-2 py-1 rounded text-xs text-white"
-                    >
-                      Pixabay API
-                    </div>
-                  </div>
-                  <div class="p-5">
-                    <div class="flex gap-2 mb-3">
-                      <span
-                        class="text-xs bg-teal-900/50 text-teal-300 px-2 py-1 rounded"
-                        >Async/Await</span
-                      >
-                    </div>
-                    <h3 class="text-lg font-bold text-white mb-2">
-                      Auto Footage Finder
-                    </h3>
-                    <p class="text-slate-400 text-sm">
-                      Tool for content creators to fetch stock videos by keyword
-                      using Pixabay API.
-                    </p>
-                  </div>
-                </div>
-
-                <div
-                  class="bg-card rounded-xl overflow-hidden border border-slate-700 hover:border-primary/50 transition-all hover:-translate-y-1"
-                >
-                  <div class="h-48 bg-slate-800 relative">
-                    <img
-                      src="asset/ux.png"
-                      class="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div class="p-5">
-                    <div class="flex gap-2 mb-3">
-                      <span
-                        class="text-xs bg-pink-900/50 text-pink-300 px-2 py-1 rounded"
-                        >Figma</span
-                      >
-                      <span
-                        class="text-xs bg-purple-900/50 text-purple-300 px-2 py-1 rounded"
-                        >Prototyping</span
-                      >
-                    </div>
-                    <h3 class="text-lg font-bold text-white mb-2">
-                      Sport Hub UI
-                    </h3>
-                    <p class="text-slate-400 text-sm">
-                      Mobile app design for finding sports partners. Includes
-                      prototyping and user journey.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div
-          class="swiper-slide flex items-center justify-center p-6 bg-darker"
-        >
-          <div class="text-center max-w-2xl">
-            <h2 class="text-3xl font-bold text-white mb-8">
-              Let's Build Something Amazing Together
-            </h2>
-            <p class="text-slate-400 mb-10 text-lg">
-              Currently open for freelance projects and full-time opportunities.
-            </p>
-
-            <div class="flex flex-col gap-4 max-w-xs mx-auto">
-              <a
-                href="https://wa.me/62895339194375"
-                class="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-xl font-bold flex items-center justify-center gap-3 transition-all hover:scale-105"
-              >
-                <i class="fab fa-whatsapp text-2xl"></i> Chat on WhatsApp
-              </a>
-              <a
-                href="mailto:Sultonialwi64@gmail.com"
-                class="bg-slate-800 hover:bg-slate-700 text-white px-8 py-4 rounded-xl font-bold flex items-center justify-center gap-3 transition-all"
-              >
-                <i class="fas fa-envelope text-xl"></i> Send Email
-              </a>
-            </div>
-
-            <div class="mt-16 text-slate-600 text-sm">
-              <p>
-                &copy; 2026 Ahmad Sultoni Alwi. Built with Tailwind CSS &
-                Swiper.
-              </p>
+            <div class="p-4 bg-card border border-slate-700 rounded-lg flex-1">
+              <h4 class="text-xl md:text-2xl font-bold text-white mb-1">MSIB</h4>
+              <p class="text-sm text-slate-400">Microsoft Alumni</p>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 w-auto">
-      <nav
-        class="glass-nav rounded-full p-1.5 flex items-center relative shadow-2xl gap-2"
-      >
-        <div
-          id="nav-indicator"
-          class="absolute bg-white rounded-full transition-all duration-300 ease-out shadow-md pointer-events-none opacity-0"
-        ></div>
+    <!-- SECTION 3: PROJECTS -->
+    <section id="projects" class="flex flex-col pt-24 pb-32 px-4 bg-[#0f172a]">
+      <div class="max-w-6xl w-full mx-auto flex flex-col items-center">
+        <div class="text-center mb-12 shrink-0">
+          <h2 class="text-3xl font-bold text-white">Featured Projects</h2>
+          <p class="text-slate-400">Scroll to browse my recent work</p>
+        </div>
 
-        <button
-          class="nav-btn relative z-10 px-5 py-2.5 rounded-full text-slate-400 text-sm font-medium transition-colors"
-          onclick="swiper.slideTo(0)"
-        >
-          Home
-        </button>
-        <button
-          class="nav-btn relative z-10 px-5 py-2.5 rounded-full text-slate-400 text-sm font-medium transition-colors"
-          onclick="swiper.slideTo(1)"
-        >
-          About
-        </button>
-        <button
-          class="nav-btn relative z-10 px-5 py-2.5 rounded-full text-slate-400 text-sm font-medium transition-colors"
-          onclick="swiper.slideTo(2)"
-        >
-          Work
-        </button>
-        <button
-          class="nav-btn relative z-10 px-5 py-2.5 rounded-full text-slate-400 text-sm font-medium transition-colors"
-          onclick="swiper.slideTo(3)"
-        >
-          Contact
-        </button>
+        <div class="w-full">
+          <div class="swiper projectsSwiper">
+            <div class="swiper-wrapper">
+                <!-- Slide 1: B2B Supply Chain -->
+                <div class="swiper-slide">
+                  <div class="group bg-gradient-to-b from-slate-800 to-card rounded-2xl overflow-hidden border border-slate-700/50 hover:border-primary/60 transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:shadow-blue-500/10 h-full flex flex-col">
+                    <div class="h-52 relative shrink-0 overflow-hidden">
+                      <img src="asset/B2B.png" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                      <div class="absolute inset-0 bg-gradient-to-t from-card/90 via-transparent to-transparent"></div>
+                      <div class="absolute top-3 right-3 backdrop-blur-md bg-emerald-500/20 border border-emerald-400/30 px-3 py-1 rounded-full text-xs text-emerald-300 font-semibold">🔥 Latest</div>
+                      <div class="absolute top-3 left-3 backdrop-blur-md bg-black/40 border border-white/10 px-3 py-1 rounded-full text-xs text-white font-medium">Private Repo</div>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col">
+                      <div class="flex gap-2 mb-3 flex-wrap">
+                        <span class="text-xs bg-red-900/40 text-red-300 px-2.5 py-1 rounded-full border border-red-800/30">Laravel</span>
+                        <span class="text-xs bg-blue-900/40 text-blue-300 px-2.5 py-1 rounded-full border border-blue-800/30">MySQL</span>
+                        <span class="text-xs bg-yellow-900/40 text-yellow-300 px-2.5 py-1 rounded-full border border-yellow-800/30">Midtrans</span>
+                      </div>
+                      <h3 class="text-lg font-bold text-white mb-2">B2B Supply Chain System</h3>
+                      <p class="text-slate-400 text-sm leading-relaxed">Full-featured B2B platform with supplier dashboard, order management, automated pricing, and delivery tracking system.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Slide 2: Govt Room Booking -->
+                <div class="swiper-slide">
+                  <div class="group bg-gradient-to-b from-slate-800 to-card rounded-2xl overflow-hidden border border-slate-700/50 hover:border-primary/60 transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:shadow-blue-500/10 h-full flex flex-col">
+                    <div class="h-52 relative shrink-0 overflow-hidden">
+                      <img src="asset/ruang.png" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                      <div class="absolute inset-0 bg-gradient-to-t from-card/90 via-transparent to-transparent"></div>
+                      <div class="absolute top-3 right-3 backdrop-blur-md bg-black/40 border border-white/10 px-3 py-1 rounded-full text-xs text-white font-medium">Private Repo</div>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col">
+                      <div class="flex gap-2 mb-3 flex-wrap">
+                        <span class="text-xs bg-blue-900/40 text-blue-300 px-2.5 py-1 rounded-full border border-blue-800/30">Laravel</span>
+                        <span class="text-xs bg-slate-700/60 text-slate-300 px-2.5 py-1 rounded-full border border-slate-600/30">MySQL</span>
+                      </div>
+                      <h3 class="text-lg font-bold text-white mb-2">Sistem Booking Ruang Pemerintah</h3>
+                      <p class="text-slate-400 text-sm leading-relaxed">Sistem reservasi internal untuk Dinas Pendidikan. Dilengkapi deteksi konflik dan penjadwalan otomatis.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Slide 3: Chess School -->
+                <div class="swiper-slide">
+                  <div class="group bg-gradient-to-b from-slate-800 to-card rounded-2xl overflow-hidden border border-slate-700/50 hover:border-primary/60 transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:shadow-blue-500/10 h-full flex flex-col">
+                    <div class="h-52 relative shrink-0 overflow-hidden">
+                      <img src="asset/sanggar_catur.png" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                      <div class="absolute inset-0 bg-gradient-to-t from-card/90 via-transparent to-transparent"></div>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col">
+                      <div class="flex gap-2 mb-3 flex-wrap">
+                        <span class="text-xs bg-orange-900/40 text-orange-300 px-2.5 py-1 rounded-full border border-orange-800/30">HTML/CSS</span>
+                        <span class="text-xs bg-yellow-900/40 text-yellow-300 px-2.5 py-1 rounded-full border border-yellow-800/30">JS</span>
+                      </div>
+                      <h3 class="text-lg font-bold text-white mb-2">Website Sekolah Catur</h3>
+                      <p class="text-slate-400 text-sm leading-relaxed">Website profil modern untuk Sekolah Catur Wonosobo. Fokus pada SEO dan aksesibilitas.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Slide 4: Edu Center -->
+                <div class="swiper-slide">
+                  <div class="group bg-gradient-to-b from-slate-800 to-card rounded-2xl overflow-hidden border border-slate-700/50 hover:border-primary/60 transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:shadow-blue-500/10 h-full flex flex-col">
+                    <div class="h-52 relative shrink-0 overflow-hidden">
+                      <img src="asset/bimbel.png" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                      <div class="absolute inset-0 bg-gradient-to-t from-card/90 via-transparent to-transparent"></div>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col">
+                      <div class="flex gap-2 mb-3 flex-wrap">
+                        <span class="text-xs bg-green-900/40 text-green-300 px-2.5 py-1 rounded-full border border-green-800/30">Frontend</span>
+                        <span class="text-xs bg-purple-900/40 text-purple-300 px-2.5 py-1 rounded-full border border-purple-800/30">Responsive</span>
+                      </div>
+                      <h3 class="text-lg font-bold text-white mb-2">Edu Center Platform</h3>
+                      <p class="text-slate-400 text-sm leading-relaxed">Conversion-focused landing page for a Tutoring Agency, highlighting courses and success stories.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Slide 5: AI Story Generator -->
+                <div class="swiper-slide">
+                  <div class="group bg-gradient-to-b from-slate-800 to-card rounded-2xl overflow-hidden border border-slate-700/50 hover:border-primary/60 transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:shadow-blue-500/10 h-full flex flex-col">
+                    <div class="h-52 relative shrink-0 overflow-hidden">
+                      <img src="asset/script.jpeg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                      <div class="absolute inset-0 bg-gradient-to-t from-card/90 via-transparent to-transparent"></div>
+                      <div class="absolute top-3 right-3 backdrop-blur-md bg-indigo-500/20 border border-indigo-400/30 px-3 py-1 rounded-full text-xs text-indigo-300 font-medium">Groq API</div>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col">
+                      <div class="flex gap-2 mb-3 flex-wrap">
+                        <span class="text-xs bg-indigo-900/40 text-indigo-300 px-2.5 py-1 rounded-full border border-indigo-800/30">AI Integration</span>
+                      </div>
+                      <h3 class="text-lg font-bold text-white mb-2">AI Story Generator</h3>
+                      <p class="text-slate-400 text-sm leading-relaxed">Generates creative stories instantly using Groq AI. Showcasing prompt engineering.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Slide 6: Auto Footage Finder -->
+                <div class="swiper-slide">
+                  <div class="group bg-gradient-to-b from-slate-800 to-card rounded-2xl overflow-hidden border border-slate-700/50 hover:border-primary/60 transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:shadow-blue-500/10 h-full flex flex-col">
+                    <div class="h-52 relative shrink-0 overflow-hidden">
+                      <img src="asset/footage.png" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                      <div class="absolute inset-0 bg-gradient-to-t from-card/90 via-transparent to-transparent"></div>
+                      <div class="absolute top-3 right-3 backdrop-blur-md bg-teal-500/20 border border-teal-400/30 px-3 py-1 rounded-full text-xs text-teal-300 font-medium">Pixabay API</div>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col">
+                      <div class="flex gap-2 mb-3 flex-wrap">
+                        <span class="text-xs bg-teal-900/40 text-teal-300 px-2.5 py-1 rounded-full border border-teal-800/30">Async/Await</span>
+                      </div>
+                      <h3 class="text-lg font-bold text-white mb-2">Auto Footage Finder</h3>
+                      <p class="text-slate-400 text-sm leading-relaxed">Tool for content creators to fetch stock videos by keyword using Pixabay API.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Slide 7: Sport Hub UI -->
+                <div class="swiper-slide">
+                  <div class="group bg-gradient-to-b from-slate-800 to-card rounded-2xl overflow-hidden border border-slate-700/50 hover:border-primary/60 transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:shadow-blue-500/10 h-full flex flex-col">
+                    <div class="h-52 relative shrink-0 overflow-hidden">
+                      <img src="asset/ux.png" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                      <div class="absolute inset-0 bg-gradient-to-t from-card/90 via-transparent to-transparent"></div>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col">
+                      <div class="flex gap-2 mb-3 flex-wrap">
+                        <span class="text-xs bg-pink-900/40 text-pink-300 px-2.5 py-1 rounded-full border border-pink-800/30">Figma</span>
+                        <span class="text-xs bg-purple-900/40 text-purple-300 px-2.5 py-1 rounded-full border border-purple-800/30">Prototyping</span>
+                      </div>
+                      <h3 class="text-lg font-bold text-white mb-2">Sport Hub UI</h3>
+                      <p class="text-slate-400 text-sm leading-relaxed">Mobile app design for finding sports partners. Includes prototyping and user journey.</p>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="swiper-scrollbar mt-4 relative"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: CONTACT -->
+    <section id="contact" class="flex items-center justify-center p-6 bg-darker">
+      <div class="text-center max-w-2xl py-16">
+        <h2 class="text-3xl font-bold text-white mb-8">Let's Build Something Amazing Together</h2>
+        <p class="text-slate-400 mb-10 text-lg">Currently open for freelance projects and full-time opportunities.</p>
+
+        <div class="flex flex-col gap-4 max-w-xs mx-auto">
+          <a href="https://wa.me/62895339194375" class="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-xl font-bold flex items-center justify-center gap-3 transition-all hover:scale-105">
+            <i class="fab fa-whatsapp text-2xl"></i> Chat on WhatsApp
+          </a>
+          <a href="mailto:Sultonialwi64@gmail.com" class="bg-slate-800 hover:bg-slate-700 text-white px-8 py-4 rounded-xl font-bold flex items-center justify-center gap-3 transition-all">
+            <i class="fas fa-envelope text-xl"></i> Send Email
+          </a>
+        </div>
+
+        <div class="mt-16 text-slate-600 text-sm">
+          <p>&copy; 2026 Ahmad Sultoni Alwi. Built with Tailwind CSS & Swiper.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- NAVBAR PILL FIXED -->
+    <div class="fixed bottom-4 md:bottom-6 left-1/2 -translate-x-1/2 z-50 w-auto px-4">
+      <nav class="glass-nav rounded-full p-1 md:p-1.5 flex items-center relative shadow-2xl gap-1 md:gap-2 flex-nowrap justify-center overflow-x-auto whitespace-nowrap max-w-[90vw]">
+        <div id="nav-indicator"></div>
+
+        <a href="#home" class="nav-btn relative z-10 px-2 md:px-5 py-1.5 md:py-2.5 rounded-full text-slate-400 text-xs md:text-sm font-medium transition-colors">Home</a>
+        <a href="#about" class="nav-btn relative z-10 px-2 md:px-5 py-1.5 md:py-2.5 rounded-full text-slate-400 text-xs md:text-sm font-medium transition-colors">About</a>
+        <a href="#projects" class="nav-btn relative z-10 px-2 md:px-5 py-1.5 md:py-2.5 rounded-full text-slate-400 text-xs md:text-sm font-medium transition-colors">Work</a>
+        <a href="#contact" class="nav-btn relative z-10 px-2 md:px-5 py-1.5 md:py-2.5 rounded-full text-slate-400 text-xs md:text-sm font-medium transition-colors">Contact</a>
 
         <!-- Language Selector -->
-        <div class="relative z-10 ml-2 pl-2 border-l border-slate-600 flex gap-1">
-          <button
-            id="lang-en"
-            class="lang-btn relative px-3 py-2 rounded-full text-xs font-medium text-slate-300 hover:text-white transition-colors"
-            onclick="changeLanguage('en')"
-          >
-            EN
-          </button>
-          <button
-            id="lang-id"
-            class="lang-btn relative px-3 py-2 rounded-full text-xs font-medium text-slate-300 hover:text-white transition-colors"
-            onclick="changeLanguage('id')"
-          >
-            ID
-          </button>
+        <div class="relative z-10 ml-1 md:ml-2 pl-1 md:pl-2 border-l border-slate-600 flex gap-0.5 md:gap-1">
+          <button id="lang-en" class="lang-btn relative px-2 md:px-3 py-1 md:py-2 rounded-full text-xs font-medium text-slate-300 hover:text-white transition-colors" onclick="changeLanguage('en')">EN</button>
+          <button id="lang-id" class="lang-btn relative px-2 md:px-3 py-1 md:py-2 rounded-full text-xs font-medium text-slate-300 hover:text-white transition-colors" onclick="changeLanguage('id')">ID</button>
         </div>
       </nav>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>
-      // Data Terjemahan
-      const translations = {
-        en: {
-          hello: "Hello, I am",
-          buildingRobust: "Building",
-          robustSystems: "Robust Systems",
-          ampersand: "&",
-          intuitiveInterfaces: "Intuitive Interfaces",
-          subtitle: "Software Engineer & Full-Stack Developer specializing in Laravel, Modern Web Technologies, and AI Integration.",
-          viewProjects: "View Projects",
-          aboutMe: "About Me",
-          bridging: "Bridging the gap between Design and Engineering.",
-          description: "I am a Software Engineer with a strong foundation in Full-Stack Web Development. Currently active as a Freelance IT Consultant, I help businesses transform their ideas into scalable digital products.",
-          techStack: "Tech Stack",
-          itSolutions: "IT Solutions Provider",
-          endToEnd: "End-to-End Digital Transformation",
-          msibLabel: "MSIB",
-          microsoftAlumni: "Microsoft Alumni",
-          featuredProjects: "Featured Projects",
-          scrollDown: "Scroll down to see my recent work",
-          govtRoomTitle: "Govt. Room Booking",
-          govtRoomDesc: "Internal reservation system for Dinas Pendidikan. Features conflict detection and automated scheduling.",
-          chessSchoolTitle: "Chess School Web",
-          chessSchoolDesc: "Modern profile website for Wonosobo Chess School. Focused on SEO and accessibility.",
-          eduCenterTitle: "Edu Center Platform",
-          eduCenterDesc: "Conversion-focused landing page for a Tutoring Agency, highlighting courses and success stories.",
-          aiStoryTitle: "AI Story Generator",
-          aiStoryDesc: "Generates creative stories instantly using Groq AI. Showcasing prompt engineering.",
-          footageTitle: "Auto Footage Finder",
-          footageDesc: "Tool for content creators to fetch stock videos by keyword using Pixabay API.",
-          sportHubTitle: "Sport Hub UI",
-          sportHubDesc: "Mobile app design for finding sports partners. Includes prototyping and user journey.",
-          letsBuild: "Let's Build Something Amazing Together",
-          openFor: "Currently open for freelance projects and full-time opportunities.",
-          whatsappBtn: "Chat on WhatsApp",
-          emailBtn: "Send Email",
-          copyright: "© 2026 Ahmad Sultoni Alwi. Built with Tailwind CSS & Swiper."
-        },
-        id: {
-          hello: "Halo, saya adalah",
-          buildingRobust: "Membangun",
-          robustSystems: "Sistem Handal",
-          ampersand: "&",
-          intuitiveInterfaces: "Antarmuka Intuitif",
-          subtitle: "Software Engineer & Full-Stack Developer yang berspesialisasi dalam Laravel, Teknologi Web Modern, dan Integrasi AI.",
-          viewProjects: "Lihat Proyek",
-          aboutMe: "Tentang Saya",
-          bridging: "Menjembatani celah antara Desain dan Engineering.",
-          description: "Saya adalah Software Engineer dengan fondasi kuat dalam Full-Stack Web Development. Saat ini aktif sebagai Freelance IT Consultant, membantu bisnis mengubah ide mereka menjadi produk digital yang scalable.",
-          techStack: "Tech Stack",
-          itSolutions: "Penyedia Solusi IT",
-          endToEnd: "Transformasi Digital End-to-End",
-          msibLabel: "MSIB",
-          microsoftAlumni: "Alumni Microsoft",
-          featuredProjects: "Proyek Unggulan",
-          scrollDown: "Scroll ke bawah untuk melihat pekerjaan terbaru saya",
-          govtRoomTitle: "Sistem Booking Ruang Pemerintah",
-          govtRoomDesc: "Sistem reservasi internal untuk Dinas Pendidikan. Dilengkapi deteksi konflik dan penjadwalan otomatis.",
-          chessSchoolTitle: "Website Sekolah Catur",
-          chessSchoolDesc: "Website profil modern untuk Sekolah Catur Wonosobo. Fokus pada SEO dan aksesibilitas.",
-          eduCenterTitle: "Platform Pusat Pendidikan",
-          eduCenterDesc: "Landing page fokus konversi untuk Agensi Bimbingan Belajar, menampilkan kursus dan kisah sukses.",
-          aiStoryTitle: "Pembuat Cerita AI",
-          aiStoryDesc: "Menghasilkan cerita kreatif secara instan menggunakan Groq AI. Menampilkan prompt engineering.",
-          footageTitle: "Pencari Footage Otomatis",
-          footageDesc: "Tool untuk content creator mengambil video stok berdasarkan keyword menggunakan Pixabay API.",
-          sportHubTitle: "Sport Hub UI",
-          sportHubDesc: "Desain aplikasi mobile untuk mencari mitra olahraga. Mencakup prototyping dan user journey.",
-          letsBuild: "Mari Kita Bangun Sesuatu yang Luar Biasa Bersama",
-          openFor: "Saat ini terbuka untuk proyek freelance dan peluang full-time.",
-          whatsappBtn: "Chat di WhatsApp",
-          emailBtn: "Kirim Email",
-          copyright: "© 2026 Ahmad Sultoni Alwi. Dibuat dengan Tailwind CSS & Swiper."
-        }
-      };
-
-      let currentLanguage = localStorage.getItem('language') || 'en';
-
-      // 1. Inisialisasi Swiper (Geser Halaman)
-      const swiper = new Swiper(".mySwiper", {
-        direction: "vertical", // Geser vertikal (seperti aplikasi)
-        mousewheel: true, // Bisa scroll pakai mouse
-        speed: 700, // Kecepatan animasi
-        effect: "slide", // Efek geser biasa
-        hashNavigation: false, // Matikan hash di URL agar bersih
-        on: {
-          slideChange: function () {
-            updateNav(this.activeIndex); // Update navbar saat digeser
-          },
-        },
-      });
-
-      // 2. Logic Navbar "App-Like" (Kapsul Putih)
-      const navBtns = document.querySelectorAll(".nav-btn");
-      const indicator = document.getElementById("nav-indicator");
-
-      function updateNav(index) {
-        // Reset semua tombol jadi warna abu
-        navBtns.forEach((btn) => {
-          btn.classList.remove("active");
-          btn.classList.remove("text-slate-900"); // Hapus warna hitam
-          btn.classList.add("text-slate-400"); // Balik ke abu
-        });
-
-        // Ambil tombol yang aktif
-        const activeBtn = navBtns[index];
-        activeBtn.classList.add("active");
-        activeBtn.classList.remove("text-slate-400");
-        activeBtn.classList.add("text-slate-900"); // Ubah teks jadi hitam agar kontras dengan kapsul putih
-
-        // Pindahkan Kapsul Putih
-        indicator.style.width = `${activeBtn.offsetWidth}px`;
-        indicator.style.height = `${activeBtn.offsetHeight}px`;
-        indicator.style.transform = `translateX(${activeBtn.offsetLeft}px)`;
-        indicator.style.opacity = "1";
-      }
-
-      // 3. Language Selector Logic
-      function changeLanguage(lang) {
-        currentLanguage = lang;
-        localStorage.setItem('language', lang);
-        updatePageContent();
-        updateLanguageButtonStyle();
-      }
-
-      function updateLanguageButtonStyle() {
-        const enBtn = document.getElementById('lang-en');
-        const idBtn = document.getElementById('lang-id');
-        
-        if (currentLanguage === 'en') {
-          enBtn.classList.add('bg-white', 'text-slate-900', 'font-bold');
-          enBtn.classList.remove('text-slate-300');
-          idBtn.classList.remove('bg-white', 'text-slate-900', 'font-bold');
-          idBtn.classList.add('text-slate-300');
-        } else {
-          idBtn.classList.add('bg-white', 'text-slate-900', 'font-bold');
-          idBtn.classList.remove('text-slate-300');
-          enBtn.classList.remove('bg-white', 'text-slate-900', 'font-bold');
-          enBtn.classList.add('text-slate-300');
-        }
-      }
-
-      function updatePageContent() {
-        const t = translations[currentLanguage];
-
-        // Slide 1 - Home
-        document.querySelector('p[class*="animate-pulse"]').textContent = t.hello;
-        document.querySelectorAll('.swiper-slide')[0].querySelector('h1').textContent = 'Ahmad Sultoni Alwi';
-        document.querySelectorAll('.swiper-slide')[0].querySelector('h2').innerHTML = 
-          `${t.buildingRobust} <span class="text-white font-medium">${t.robustSystems}</span> & <span class="text-white font-medium">${t.intuitiveInterfaces}</span>.`;
-        document.querySelectorAll('.swiper-slide')[0].querySelector('p[class*="max-w-2xl"]').textContent = t.subtitle;
-        document.querySelectorAll('.swiper-slide')[0].querySelector('button[onclick="swiper.slideTo(2)"]').textContent = t.viewProjects;
-
-        // Slide 2 - About
-        const aboutSlide = document.querySelectorAll('.swiper-slide')[1];
-        aboutSlide.querySelectorAll('h3')[0].textContent = t.aboutMe;
-        aboutSlide.querySelector('h2').textContent = t.bridging;
-        const aboutText = aboutSlide.querySelector('p[class*="leading-relaxed"]');
-        aboutText.innerHTML = `I am a Software Engineer with a strong foundation in <strong>Full-Stack Web Development</strong>. Currently active as a Freelance IT Consultant, I help businesses transform their ideas into scalable digital products.`.replace(/I am a Software Engineer with a strong foundation in <strong>Full-Stack Web Development<\/strong>. Currently active as a Freelance IT Consultant, I help businesses transform their ideas into scalable digital products./, t.description);
-
-        if (currentLanguage === 'id') {
-          aboutText.innerHTML = t.description;
-        }
-
-        aboutSlide.querySelectorAll('p[class*="text-slate-500"]')[0].textContent = t.techStack;
-        const infoBoxes = aboutSlide.querySelectorAll('div[class*="p-4 bg-card"]');
-        infoBoxes[0].querySelector('h4').textContent = t.itSolutions;
-        infoBoxes[0].querySelector('p').textContent = t.endToEnd;
-        infoBoxes[1].querySelector('h4').textContent = t.msibLabel;
-        infoBoxes[1].querySelector('p').textContent = t.microsoftAlumni;
-
-        // Slide 3 - Projects
-        const projectSlide = document.querySelectorAll('.swiper-slide')[2];
-        projectSlide.querySelector('h2').textContent = t.featuredProjects;
-        projectSlide.querySelector('p[class*="text-slate-400"]').textContent = t.scrollDown;
-
-        const projects = projectSlide.querySelectorAll('[class*="bg-card rounded-xl"]');
-        
-        // Update project 1 - Govt Room
-        projects[0].querySelector('h3').textContent = t.govtRoomTitle;
-        projects[0].querySelector('p[class*="text-sm"]').textContent = t.govtRoomDesc;
-
-        // Update project 2 - Chess School
-        projects[1].querySelector('h3').textContent = t.chessSchoolTitle;
-        projects[1].querySelector('p[class*="text-sm"]').textContent = t.chessSchoolDesc;
-
-        // Update project 3 - Edu Center
-        projects[2].querySelector('h3').textContent = t.eduCenterTitle;
-        projects[2].querySelector('p[class*="text-sm"]').textContent = t.eduCenterDesc;
-
-        // Update project 4 - AI Story
-        projects[3].querySelector('h3').textContent = t.aiStoryTitle;
-        projects[3].querySelector('p[class*="text-sm"]').textContent = t.aiStoryDesc;
-
-        // Update project 5 - Footage
-        projects[4].querySelector('h3').textContent = t.footageTitle;
-        projects[4].querySelector('p[class*="text-sm"]').textContent = t.footageDesc;
-
-        // Update project 6 - Sport Hub
-        projects[5].querySelector('h3').textContent = t.sportHubTitle;
-        projects[5].querySelector('p[class*="text-sm"]').textContent = t.sportHubDesc;
-
-        // Slide 4 - Contact
-        const contactSlide = document.querySelectorAll('.swiper-slide')[3];
-        contactSlide.querySelector('h2').textContent = t.letsBuild;
-        contactSlide.querySelector('p[class*="text-slate-400"]').textContent = t.openFor;
-
-        const ctaLinks = contactSlide.querySelectorAll('a[href]');
-        ctaLinks[0].innerHTML = `<i class="fab fa-whatsapp text-2xl"></i> ${t.whatsappBtn}`;
-        ctaLinks[1].innerHTML = `<i class="fas fa-envelope text-xl"></i> ${t.emailBtn}`;
-        contactSlide.querySelector('p[class*="text-slate-600"]').textContent = t.copyright;
-      }
-
-      // Jalankan saat pertama kali load
-      window.addEventListener("load", () => {
-        updateNav(swiper.activeIndex);
-        updateLanguageButtonStyle();
-        if (currentLanguage === 'id') {
-          updatePageContent();
-        }
-      });
-
-      // Klik tombol navbar menggeser halaman
-      navBtns.forEach((btn, index) => {
-        btn.addEventListener("click", () => {
-          swiper.slideTo(index);
-        });
-      });
-    </script>
+    <script src="js/lang.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
