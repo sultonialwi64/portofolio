@@ -454,7 +454,7 @@
 
     <div class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 w-auto">
       <nav
-        class="glass-nav rounded-full p-1.5 flex items-center relative shadow-2xl"
+        class="glass-nav rounded-full p-1.5 flex items-center relative shadow-2xl gap-2"
       >
         <div
           id="nav-indicator"
@@ -485,11 +485,107 @@
         >
           Contact
         </button>
+
+        <!-- Language Selector -->
+        <div class="relative z-10 ml-2 pl-2 border-l border-slate-600 flex gap-1">
+          <button
+            id="lang-en"
+            class="lang-btn relative px-3 py-2 rounded-full text-xs font-medium text-slate-300 hover:text-white transition-colors"
+            onclick="changeLanguage('en')"
+          >
+            EN
+          </button>
+          <button
+            id="lang-id"
+            class="lang-btn relative px-3 py-2 rounded-full text-xs font-medium text-slate-300 hover:text-white transition-colors"
+            onclick="changeLanguage('id')"
+          >
+            ID
+          </button>
+        </div>
       </nav>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
+      // Data Terjemahan
+      const translations = {
+        en: {
+          hello: "Hello, I am",
+          buildingRobust: "Building",
+          robustSystems: "Robust Systems",
+          ampersand: "&",
+          intuitiveInterfaces: "Intuitive Interfaces",
+          subtitle: "Software Engineer & Full-Stack Developer specializing in Laravel, Modern Web Technologies, and AI Integration.",
+          viewProjects: "View Projects",
+          aboutMe: "About Me",
+          bridging: "Bridging the gap between Design and Engineering.",
+          description: "I am a Software Engineer with a strong foundation in Full-Stack Web Development. Currently active as a Freelance IT Consultant, I help businesses transform their ideas into scalable digital products.",
+          techStack: "Tech Stack",
+          itSolutions: "IT Solutions Provider",
+          endToEnd: "End-to-End Digital Transformation",
+          msibLabel: "MSIB",
+          microsoftAlumni: "Microsoft Alumni",
+          featuredProjects: "Featured Projects",
+          scrollDown: "Scroll down to see my recent work",
+          govtRoomTitle: "Govt. Room Booking",
+          govtRoomDesc: "Internal reservation system for Dinas Pendidikan. Features conflict detection and automated scheduling.",
+          chessSchoolTitle: "Chess School Web",
+          chessSchoolDesc: "Modern profile website for Wonosobo Chess School. Focused on SEO and accessibility.",
+          eduCenterTitle: "Edu Center Platform",
+          eduCenterDesc: "Conversion-focused landing page for a Tutoring Agency, highlighting courses and success stories.",
+          aiStoryTitle: "AI Story Generator",
+          aiStoryDesc: "Generates creative stories instantly using Groq AI. Showcasing prompt engineering.",
+          footageTitle: "Auto Footage Finder",
+          footageDesc: "Tool for content creators to fetch stock videos by keyword using Pixabay API.",
+          sportHubTitle: "Sport Hub UI",
+          sportHubDesc: "Mobile app design for finding sports partners. Includes prototyping and user journey.",
+          letsBuild: "Let's Build Something Amazing Together",
+          openFor: "Currently open for freelance projects and full-time opportunities.",
+          whatsappBtn: "Chat on WhatsApp",
+          emailBtn: "Send Email",
+          copyright: "© 2026 Ahmad Sultoni Alwi. Built with Tailwind CSS & Swiper."
+        },
+        id: {
+          hello: "Halo, saya adalah",
+          buildingRobust: "Membangun",
+          robustSystems: "Sistem Handal",
+          ampersand: "&",
+          intuitiveInterfaces: "Antarmuka Intuitif",
+          subtitle: "Software Engineer & Full-Stack Developer yang berspesialisasi dalam Laravel, Teknologi Web Modern, dan Integrasi AI.",
+          viewProjects: "Lihat Proyek",
+          aboutMe: "Tentang Saya",
+          bridging: "Menjembatani celah antara Desain dan Engineering.",
+          description: "Saya adalah Software Engineer dengan fondasi kuat dalam Full-Stack Web Development. Saat ini aktif sebagai Freelance IT Consultant, membantu bisnis mengubah ide mereka menjadi produk digital yang scalable.",
+          techStack: "Tech Stack",
+          itSolutions: "Penyedia Solusi IT",
+          endToEnd: "Transformasi Digital End-to-End",
+          msibLabel: "MSIB",
+          microsoftAlumni: "Alumni Microsoft",
+          featuredProjects: "Proyek Unggulan",
+          scrollDown: "Scroll ke bawah untuk melihat pekerjaan terbaru saya",
+          govtRoomTitle: "Sistem Booking Ruang Pemerintah",
+          govtRoomDesc: "Sistem reservasi internal untuk Dinas Pendidikan. Dilengkapi deteksi konflik dan penjadwalan otomatis.",
+          chessSchoolTitle: "Website Sekolah Catur",
+          chessSchoolDesc: "Website profil modern untuk Sekolah Catur Wonosobo. Fokus pada SEO dan aksesibilitas.",
+          eduCenterTitle: "Platform Pusat Pendidikan",
+          eduCenterDesc: "Landing page fokus konversi untuk Agensi Bimbingan Belajar, menampilkan kursus dan kisah sukses.",
+          aiStoryTitle: "Pembuat Cerita AI",
+          aiStoryDesc: "Menghasilkan cerita kreatif secara instan menggunakan Groq AI. Menampilkan prompt engineering.",
+          footageTitle: "Pencari Footage Otomatis",
+          footageDesc: "Tool untuk content creator mengambil video stok berdasarkan keyword menggunakan Pixabay API.",
+          sportHubTitle: "Sport Hub UI",
+          sportHubDesc: "Desain aplikasi mobile untuk mencari mitra olahraga. Mencakup prototyping dan user journey.",
+          letsBuild: "Mari Kita Bangun Sesuatu yang Luar Biasa Bersama",
+          openFor: "Saat ini terbuka untuk proyek freelance dan peluang full-time.",
+          whatsappBtn: "Chat di WhatsApp",
+          emailBtn: "Kirim Email",
+          copyright: "© 2026 Ahmad Sultoni Alwi. Dibuat dengan Tailwind CSS & Swiper."
+        }
+      };
+
+      let currentLanguage = localStorage.getItem('language') || 'en';
+
       // 1. Inisialisasi Swiper (Geser Halaman)
       const swiper = new Swiper(".mySwiper", {
         direction: "vertical", // Geser vertikal (seperti aplikasi)
@@ -529,9 +625,109 @@
         indicator.style.opacity = "1";
       }
 
+      // 3. Language Selector Logic
+      function changeLanguage(lang) {
+        currentLanguage = lang;
+        localStorage.setItem('language', lang);
+        updatePageContent();
+        updateLanguageButtonStyle();
+      }
+
+      function updateLanguageButtonStyle() {
+        const enBtn = document.getElementById('lang-en');
+        const idBtn = document.getElementById('lang-id');
+        
+        if (currentLanguage === 'en') {
+          enBtn.classList.add('bg-white', 'text-slate-900', 'font-bold');
+          enBtn.classList.remove('text-slate-300');
+          idBtn.classList.remove('bg-white', 'text-slate-900', 'font-bold');
+          idBtn.classList.add('text-slate-300');
+        } else {
+          idBtn.classList.add('bg-white', 'text-slate-900', 'font-bold');
+          idBtn.classList.remove('text-slate-300');
+          enBtn.classList.remove('bg-white', 'text-slate-900', 'font-bold');
+          enBtn.classList.add('text-slate-300');
+        }
+      }
+
+      function updatePageContent() {
+        const t = translations[currentLanguage];
+
+        // Slide 1 - Home
+        document.querySelector('p[class*="animate-pulse"]').textContent = t.hello;
+        document.querySelectorAll('.swiper-slide')[0].querySelector('h1').textContent = 'Ahmad Sultoni Alwi';
+        document.querySelectorAll('.swiper-slide')[0].querySelector('h2').innerHTML = 
+          `${t.buildingRobust} <span class="text-white font-medium">${t.robustSystems}</span> & <span class="text-white font-medium">${t.intuitiveInterfaces}</span>.`;
+        document.querySelectorAll('.swiper-slide')[0].querySelector('p[class*="max-w-2xl"]').textContent = t.subtitle;
+        document.querySelectorAll('.swiper-slide')[0].querySelector('button[onclick="swiper.slideTo(2)"]').textContent = t.viewProjects;
+
+        // Slide 2 - About
+        const aboutSlide = document.querySelectorAll('.swiper-slide')[1];
+        aboutSlide.querySelectorAll('h3')[0].textContent = t.aboutMe;
+        aboutSlide.querySelector('h2').textContent = t.bridging;
+        const aboutText = aboutSlide.querySelector('p[class*="leading-relaxed"]');
+        aboutText.innerHTML = `I am a Software Engineer with a strong foundation in <strong>Full-Stack Web Development</strong>. Currently active as a Freelance IT Consultant, I help businesses transform their ideas into scalable digital products.`.replace(/I am a Software Engineer with a strong foundation in <strong>Full-Stack Web Development<\/strong>. Currently active as a Freelance IT Consultant, I help businesses transform their ideas into scalable digital products./, t.description);
+
+        if (currentLanguage === 'id') {
+          aboutText.innerHTML = t.description;
+        }
+
+        aboutSlide.querySelectorAll('p[class*="text-slate-500"]')[0].textContent = t.techStack;
+        const infoBoxes = aboutSlide.querySelectorAll('div[class*="p-4 bg-card"]');
+        infoBoxes[0].querySelector('h4').textContent = t.itSolutions;
+        infoBoxes[0].querySelector('p').textContent = t.endToEnd;
+        infoBoxes[1].querySelector('h4').textContent = t.msibLabel;
+        infoBoxes[1].querySelector('p').textContent = t.microsoftAlumni;
+
+        // Slide 3 - Projects
+        const projectSlide = document.querySelectorAll('.swiper-slide')[2];
+        projectSlide.querySelector('h2').textContent = t.featuredProjects;
+        projectSlide.querySelector('p[class*="text-slate-400"]').textContent = t.scrollDown;
+
+        const projects = projectSlide.querySelectorAll('[class*="bg-card rounded-xl"]');
+        
+        // Update project 1 - Govt Room
+        projects[0].querySelector('h3').textContent = t.govtRoomTitle;
+        projects[0].querySelector('p[class*="text-sm"]').textContent = t.govtRoomDesc;
+
+        // Update project 2 - Chess School
+        projects[1].querySelector('h3').textContent = t.chessSchoolTitle;
+        projects[1].querySelector('p[class*="text-sm"]').textContent = t.chessSchoolDesc;
+
+        // Update project 3 - Edu Center
+        projects[2].querySelector('h3').textContent = t.eduCenterTitle;
+        projects[2].querySelector('p[class*="text-sm"]').textContent = t.eduCenterDesc;
+
+        // Update project 4 - AI Story
+        projects[3].querySelector('h3').textContent = t.aiStoryTitle;
+        projects[3].querySelector('p[class*="text-sm"]').textContent = t.aiStoryDesc;
+
+        // Update project 5 - Footage
+        projects[4].querySelector('h3').textContent = t.footageTitle;
+        projects[4].querySelector('p[class*="text-sm"]').textContent = t.footageDesc;
+
+        // Update project 6 - Sport Hub
+        projects[5].querySelector('h3').textContent = t.sportHubTitle;
+        projects[5].querySelector('p[class*="text-sm"]').textContent = t.sportHubDesc;
+
+        // Slide 4 - Contact
+        const contactSlide = document.querySelectorAll('.swiper-slide')[3];
+        contactSlide.querySelector('h2').textContent = t.letsBuild;
+        contactSlide.querySelector('p[class*="text-slate-400"]').textContent = t.openFor;
+
+        const ctaLinks = contactSlide.querySelectorAll('a[href]');
+        ctaLinks[0].innerHTML = `<i class="fab fa-whatsapp text-2xl"></i> ${t.whatsappBtn}`;
+        ctaLinks[1].innerHTML = `<i class="fas fa-envelope text-xl"></i> ${t.emailBtn}`;
+        contactSlide.querySelector('p[class*="text-slate-600"]').textContent = t.copyright;
+      }
+
       // Jalankan saat pertama kali load
       window.addEventListener("load", () => {
         updateNav(swiper.activeIndex);
+        updateLanguageButtonStyle();
+        if (currentLanguage === 'id') {
+          updatePageContent();
+        }
       });
 
       // Klik tombol navbar menggeser halaman
