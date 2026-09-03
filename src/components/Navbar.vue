@@ -15,14 +15,14 @@ onMounted(() => {
 </script>
 
 <template>
-  <nav class="fixed top-0 left-0 w-full p-6 flex justify-between items-center z-50 mix-blend-difference text-white">
-    <a href="#home" class="text-xl font-bold nav-item">
+  <nav class="fixed top-0 left-0 w-full p-4 md:p-6 flex justify-between items-center z-50 mix-blend-difference text-white">
+    <a href="#home" class="text-lg md:text-xl font-bold nav-item truncate pr-2">
       SULTONI.<span class="text-slate-400 font-light">ALWI</span>
     </a>
-    <div class="flex gap-6">
-      <a href="#work" class="nav-item magnetic px-2 hover:text-slate-300 transition-colors">Work</a>
-      <a href="#selected-projects" class="nav-item magnetic px-2 hover:text-slate-300 transition-colors">Project</a>
-      <a href="#contact" class="nav-item magnetic px-2 hover:text-slate-300 transition-colors">Contact</a>
+    <div class="flex gap-3 md:gap-6 text-sm md:text-base whitespace-nowrap">
+      <a href="#work" class="nav-item magnetic px-1 md:px-2 hover:text-slate-300 transition-colors">Work</a>
+      <a href="#selected-projects" class="nav-item magnetic px-1 md:px-2 hover:text-slate-300 transition-colors">Project</a>
+      <a href="#contact" class="nav-item magnetic px-1 md:px-2 hover:text-slate-300 transition-colors">Contact</a>
     </div>
   </nav>
 </template>
