@@ -86,35 +86,35 @@ const projects = [
     image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop',
     bgImage: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=800&auto=format&fit=crop',
     points: [
-      'Merancang dan mengembangkan sistem ERP komprehensif untuk mengoptimalkan efisiensi bisnis secara menyeluruh.',
-      'Memungkinkan pelacakan data operasional real-time dan manajemen terpusat.',
-      'Membangun modul Business Intelligence berbasis AI terintegrasi dengan LLM (Gemini & Grok), memungkinkan pemilik bisnis mengekstrak insight secara instan melalui natural language.'
+      'Architected and developed a comprehensive ERP system to optimize overarching business efficiency.',
+      'Enabled flexible, real-time operational data tracking and centralized management.',
+      'Engineered a custom AI-driven Business Intelligence module by integrating LLMs (Gemini & Grok), empowering business owners to extract complex insights instantly via natural language queries.'
     ],
     stack: ['Laravel', 'Vue.js', 'LLM Integration']
   },
   {
-    title: 'Sistem Penjadwalan Operasi',
+    title: 'Operation Scheduling System',
     company: 'RS PKU Muhammadiyah Wonosobo',
     date: 'Ags 2026',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1555421689-491a97ff2040?q=80&w=800&auto=format&fit=crop',
     bgImage: 'https://images.unsplash.com/photo-1581594693702-fbdc51b2763b?q=80&w=800&auto=format&fit=crop',
     points: [
-      'Membuat platform manajemen penjadwalan dinamis yang mengoptimalkan alokasi staf dan sumber daya medis.',
-      'Mengurangi konflik jadwal secara drastis dan mempercepat waktu koordinasi antar departemen.',
-      'Mendigitalisasi alur kerja administratif manual menjadi sistem terpadu yang jauh lebih efisien.'
+      'Developed a dynamic scheduling management platform that optimizes the allocation of medical staff and resources.',
+      'Drastically reduced scheduling conflicts and accelerated coordination time across multiple hospital departments.',
+      'Digitalized manual administrative workflows into a highly efficient, integrated digital system.'
     ],
     stack: ['Laravel', 'MySQL']
   },
   {
-    title: 'Sistem Booking Ruang Pemerintah',
+    title: 'Government Room Booking System',
     company: 'Dinas Pendidikan Pemuda dan Olahraga',
     date: 'Nov 2024',
     image: '/asset/ruang.png',
     bgImage: 'https://images.unsplash.com/photo-1497366858526-0766cadbe8fa?q=80&w=800&auto=format&fit=crop',
     points: [
-      'Sistem reservasi internal untuk Dinas Pendidikan yang dilengkapi deteksi konflik dan penjadwalan otomatis.',
-      'Memvalidasi jadwal secara real-time pada database, sehingga sepenuhnya mengeliminasi kasus pemesanan ruang ganda (double booking).',
-      'Mempercepat proses peminjaman ruang rapat dari yang sebelumnya menggunakan formulir kertas.'
+      'Engineered an internal reservation system for the Department of Education featuring automated scheduling and conflict detection.',
+      'Implemented real-time database validation, completely eliminating double-booking incidents across all government meeting rooms.',
+      'Significantly accelerated the room reservation process by transitioning from paper-based forms to a centralized digital workflow.'
     ],
     stack: ['Laravel', 'MySQL']
   },
@@ -126,8 +126,8 @@ const projects = [
     bgImage: 'https://images.unsplash.com/photo-1507035895480-2b3156c31fc8?q=80&w=800&auto=format&fit=crop',
     points: [
       'Mobile app design for finding sports partners.',
-      'Meliputi perancangan alur interaksi (user journey) yang mudah dimengerti.',
-      'Dilengkapi dengan interactive prototyping dan high-fidelity visual design menggunakan Figma.'
+      'Designed an intuitive user journey to ensure a seamless and engaging user experience.',
+      'Delivered interactive prototyping and high-fidelity visual designs using Figma.'
     ],
     stack: ['Figma', 'Prototyping', 'UI/UX']
   }
